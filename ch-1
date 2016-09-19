@@ -1,0 +1,15 @@
+source()
+source("myProgram.r")
+
+# create a variable with some data
+myVar = c(1, 2, 4, NA, 7)
+
+# mean of myVar w/o missing values
+mean(myVar, na.rm = T)
+
+# num of observations in myVar
+length(myVar)
+
+# list all objects
+ls()
+
