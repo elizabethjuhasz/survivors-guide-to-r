@@ -13,3 +13,21 @@ length(myVar)
 # list all objects
 ls()
 
+# command options -> AKA "arguments"
+
+# [] are for indexing vectors and matrices 
+# {} for grouping sets of commands
+
+# != not equal to
+
+save()
+# ex: save(x, y, dataset3, file = "my-rstuff.Rdata")
+load("my-rstuff.Rdata")
+
+# to save everything in current workspace 
+save.image()
+
+# to find all of the instances of the search term
+apropos()
+apropos(format)
+
