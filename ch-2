@@ -1,0 +1,47 @@
+myData = read.delim("http://www.kktg.net/R/Chapter2Data.txt", 
+  header = TRUE,                       
+  colClasses = c("character",         
+    "numeric", "numeric", "numeric",    
+    "numeric", "factor", "numeric"))   
+ # Data has headers for var names
+ # Set storage modes of variables
+ # This is just a convenience and 
+ # could be adjusted afterwards
+ 
+ summary(myData)
+ 
+ # standard deviation and removing missing values for variable GDPc
+ sd(myData$GDPc, na.rm =T)
+ 
+ # plotting female life expectancy and press freedom
+ # note: this actually gives you box plots!
+ plot(myData$PressFree, myData$FemLife)
+ 
+ # check to see whether variables are plausibly equal
+ var.test()
+ 
+ # running a test to compare variaances
+ # FemLife in states w/ free press
+ # compare w/ states w/o free press
+ var.test(myData$FemLife[myData$PressFree == "F"],
+          myData$FemLife[myData$PressFree =="NF"])
+    *** the P value showed less than .05. Reject H0 that the two variances are equal
+
+# t-test
+t.test()
+
+# pulling out the names of states that have data for female life expect. but are mssing
+# free press metric
+myData$Country.name[myData$PressFree == "" & !is.na(myData$FemLife)]
+
+# simple multiple regression model
+model1 = lm(FemLife ~ GDPc+MilSpend + PressFree, data = myData)
+summary (model1)
+
+# log transformation for a variable
+# can be done with the plot command
+plot(log(myData$GDPc), myData$FemLife)
+
+# non-linear model
+model2 = lm(FemLife ~ log(GDPc) + log(MilSpend) + PressFree, data = myData)
+summary(model2)
