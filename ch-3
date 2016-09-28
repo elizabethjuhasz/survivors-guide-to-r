@@ -1,0 +1,51 @@
+/// object types ///
+/// R is an object-oriented language ///
+
+summary()
+
+/// four types of containers: vectors, matrices, data frames, lists ///
+/// storage type / mode [as used in the book] -> logical, numerical, character ///
+/// object class -> how R should work with object ///
+
+*** commands that will tell you storage mode ***
+typeof()
+mode()
+
+*** logical values storage mode TRUE or FALSE ***
+myLogical1 = TRUE
+myLogical2 = FALSE 
+
+*** numeric integer storage mode -> nums without fractional parts ***
+*** numeric double storage mode -> nums that may have fractional parts ***
+is.character()
+as.integer()
+is.integer()
+is.wholenumber()
+is.vector()
+is.matrix()
+is.data.frame()
+is.list()
+
+DOType()
+
+*** concatenation function ***
+/// used to package a set of things up into a vector ///
+c()
+myVector = c(1, 2, 7, 9)
+
+*** matrix -> row first, column ***
+myMatrix[row,column]
+
+*** referencing column 4 ***
+myMatrix[,4]
+
+*** referencing row 12 ***
+myMatirx[12,]
+
+*** adding 7 to every element in matrix ***
+myMatrix + 7
+
+*** creating a matrix by binding two rows ***
+myMatrix = rbind(c(3, 8), c(23, 33))
+
+
