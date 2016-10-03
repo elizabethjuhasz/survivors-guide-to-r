@@ -48,4 +48,37 @@ myMatrix + 7
 *** creating a matrix by binding two rows ***
 myMatrix = rbind(c(3, 8), c(23, 33))
 
+/// data frames ///
+data.frame()
+myData = read.table("mydata", header =TRUE)
+myDataframe = data.frame(myData)
 
+myDataframe$variablename
+myDataframe["variablename"]
+myDataframe[,"variablename"]
+myDataframe[,column number]
+myDataframe[column number]
+
+*** from above the first is the clearest and most commonly used. all five = the same thing ***
+
+*** display names of the variables in the data frame ***
+names()
+
+*** if using RStudio***
+View(DataFrame)
+View()
+
+*** summary statistics ***
+summary()
+
+/// object attributes ///
+*** takes one argument. just the name of the object you want to look at ***
+attributes()
+attributes(myList)
+
+*** takes two arguments ***
+*** the name of the object, the name of the specific attribute ***
+attr()
+
+*** most straight forward way to get complete list of object attributes ***
+attributes(myObject)
