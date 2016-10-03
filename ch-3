@@ -82,3 +82,20 @@ attr()
 
 *** most straight forward way to get complete list of object attributes ***
 attributes(myObject)
+
+/// factors ///
+*** just categorical variables ***
+
+*** to try and figure out if you have a factor use ***
+attributes()
+str()
+is.factor()
+
+*** to convert factors to numeric... recommends factor to character object then numeric ***
+myTemp = as.character(myFactor)
+myNum = as.numeric(myTemp)
+
+*** or in one step ***
+myNum = as.numeric(as.character(myFactor))
+
+
