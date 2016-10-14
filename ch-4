@@ -1,3 +1,94 @@
 /// entering data ///
 *** creating data in a R environment, importing data from other datasets ***
 
+/// concatenation ///
+*** a string of nums or other data should be put together in a vector ***
+# entering data with concatenate
+myVar = c(1, 7, 3, 5, 9, 21, 8)
+
+# print data
+myVar 
+
+# concatenate words into values
+myWords = c("ant", "ball", "clown")
+
+# print variable
+myWords
+
+/// joining vectors into Matrices and Data Frames ///
+cbind()
+rbind()
+
+*** joining two or more columns into a matrix ***
+cbind(vector1, vector2)
+
+*** cbind() several variables ot be combined into a data set ***
+  ** must be sorted in same order **
+
+# cbind
+# set up some data
+temp = c(78.4, 65.3, 72.9, 81.2)
+rain = c(.025, .001, 0, 1.2)
+day = c(1, 2, 3, 4)
+# cbind demonstration
+weather1 = cbind(day, temp, rain)
+# show results
+weather1
+
+# rbind
+# set up some data
+day1 = c(.025, 78.4)
+day2 = c(.001, 65.3)
+day3 = c(0, 72.9)
+day4 = c(1.2., 81.2)
+# rbind demonstration 
+weather2 = rbind(day1, day2, day3, day4)
+
+# show matrix
+weather2
+
+# add variable names for the columns
+colnames (weather2) = c("rain", "temp")
+
+# show weather2 matrix w/ names
+weather2
+
+*** cbind incorporates the variable names as column lables and rbind incorporates as row labels ***
+rownames(myData) = 
+colnames(myData) =
+
+*** uneven vectors ***
+# setup some data
+temp = c(78.4, 65.3, 72.9, 81.2)
+rain = c(.025, .001, 0, 1.2)
+day = c("Saturday", "Sunday")
+
+# combine unequal length vectors w/ cbind
+weekend.weather = data.frame(cbind(day, temp, rain))
+
+*** the results will fill in with Sat, Sun ***
+# show results
+weekend.weather
+
+*** observations in their own vectors use rbind() ***
+*** t() transpose to force a column vector as row vect ***
+
+/// entering data w/ the R spreadsheet ///
+data.entry()
+
+# create varible 1
+myX = c(1, 2, 3)
+
+# create variable 2
+myY = c("a", "b", "c")
+
+# combine in data frame
+myData = cbind(myX, myY)
+
+# open in data entry spreadsheet
+data.entry(myData)
+
+*** data.entry() does not preserve the data frame form ***
+
+edit()
+
