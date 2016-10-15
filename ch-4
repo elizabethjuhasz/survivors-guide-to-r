@@ -93,3 +93,12 @@ data.entry(myData)
 edit()
 
 /// creating data ///
+*** simple sequence repetition *** 
+# a variable w/0-10 sequence
+myVar1 = 0:10
+myVar2 = 10:22
+myVar3 = -5:5
+
+seq()
+*** functions are the starting value, the ending value, and the step size ***
+
