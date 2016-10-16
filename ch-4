@@ -101,4 +101,21 @@ myVar3 = -5:5
 
 seq()
 *** functions are the starting value, the ending value, and the step size ***
+seq(from=, to=, by=)
+
+# a sequence from 0 to 5 by .5
+myVar4= seq(0, 5, by =.5)
+
+# a sequence from 7 to 5 by -.25
+myVar5= seq(7, 5, -.25)
+
+# repeat function rep()
+myVar1= rep(7, 3)
+*** the above will show three 7's ***
+
+myVar2 = c(rep(1, 5), rep(2, 3))
+*** the above will show 5 1's, 3 2's ***
+
+
+
 
