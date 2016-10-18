@@ -202,7 +202,41 @@ comment.char = "#"
 allowEscapes = FALSE
 flush = FALSE
 
+*** if data uses a special character or other code for missing, 
+need to pass that info to R ***
+na.strings = "myNAstrings"
 
+*** for other countries ***
+read.delim2()
+
+/// importing foreign file types ///
+*** download and load the foreign package ***
+library(foreign)
+
+*** for Stata files ***
+read.dta("myDataFile.dta")
+
+*** for Minitab portable worksheets ***
+read.mtp("myDataFile.mtp")
+
+*** for Systat files ***
+read.systata("myDataFile.syd")
+
+*** for SAS files ***
+read.ssd("myDataFile.sd7")
+
+*** for SPSS files ***
+read.spss("myDataFile.sav")
+
+library(library)
+myData = read.dta("c:/data/mydata.dta")
+
+/// web scraping ///
+readLines("http://www.myWebsiteURL")
+
+
+*** see also : ***
+http://cran.r-project.org/web/packages/foreign.pdf
 
 
 
