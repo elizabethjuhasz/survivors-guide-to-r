@@ -137,6 +137,70 @@ levels=
 # generate labels
 labels=
 
+# set up 3 levels
+# each repeats twice
+# total length is 6
+# matching labels for 3 levels
+myFactor = gl(n = 3, k = 2, length = 6, labels = c("small",
+"med", "large"))
+
+# set up 2 levels w/4 repeats
+myFactor2 = gl(2, 4, 10, c("y", "n"))
+
+*** random numbers and statistical distributions ***
+runif(n)
+
+/// importing data ///
+*** working with the working directory ***
+getwd()
+
+*** set up the working directory ***
+setwd()
+*** important:  R uses forward slashes / ***
+setwd("C:/data")
+getwd()
+
+file.choose()
+
+setwd(dirname(file.choose()))
+getwd()
+
+/// read command: blank-delimited tables ///
+read.table()
+
+*** you can also get data from clipboard ***
+myData = read.delim("clipboard", header = TRUE)
+
+*** if there is no header row ****
+myData = read.table("myDataFile.txt", header = FALSE)
+
+/// read command: comma-separated values ///
+read.csv()
+
+myData = read.csv("myDataFile.csv", header = TRUE)
+
+*** in countries where , is used for decimal ***
+read.csv2()
+
+read.table() options:
+header = TRUE
+sep = ","
+quote = "/" ` "
+dec = "."
+row.names=
+column.names=
+as.is = TRUE
+na.strings = "NA"
+colClasses = NA
+nrows = -1
+skip = 0
+check.names = TRUE
+fill = !blank.lines.skip
+strip.white = FALSE
+blank.lines.skip = TRUE
+comment.char = "#"
+allowEscapes = FALSE
+flush = FALSE
 
 
 
