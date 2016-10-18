@@ -75,6 +75,12 @@ weekend.weather
 
 /// entering data w/ the R spreadsheet ///
 data.entry()
+*** you cannot create a new dataset with data.entry() command however ***
+*** also does not preserve the data ***
+
+/// creating data ///
+
+data.entry()
 
 # create varible 1
 myX = c(1, 2, 3)
@@ -115,6 +121,24 @@ myVar1= rep(7, 3)
 
 myVar2 = c(rep(1, 5), rep(2, 3))
 *** the above will show 5 1's, 3 2's ***
+
+# generating factors
+factor()
+
+# generate levels
+gl()
+levels=
+*** gl() takes four arguments ***
+1] (n=) is the number of levels in the factor
+2] (k=) the number of times those levels should each be repeated
+3] optional. (length=) the total length of the result
+4] also optional. (lables=) a set of labels for the levels
+
+# generate labels
+labels=
+
+
+
 
 
 
