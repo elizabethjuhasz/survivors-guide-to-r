@@ -1,0 +1,56 @@
+  # note how he uses weights / normal distr.
+  # create a dataframe
+  # first variable is years
+  # sequence with colon
+  # some more years with comma
+  # next variable is animal type
+  # 25 mice, 10 kangaroos
+  #   5 elephants
+  # next is plausible weights
+  #   normally distributed
+  #   around a mean
+  #   and std dev
+  #       and rounded to 3 digits
+  # captivity status, T/F pattern
+   
+  ch5data = data.frame (year = c(1935:1959,
+    1940:1949, 
+    1935, 1942, 1958, 1964, 1970),
+  animal = c(rep("Mouse", 25),
+    rep("Kangaroo", 10),
+    rep("Elephant", 5)),
+  weight = round(c(
+    rnorm(25, mean = .06, sd = .006),
+    rnorm(10, mean = 100, sd = 14),
+    rnorm(5, mean = 12000,
+      sd = 700)), 3),
+  captive = rep(
+    c(TRUE, FALSE, FALSE, FALSE),10))
+ 
+ names()
+ *** this will give you a list of variables (columns) ***
+ 
+ length()
+ *** will tell you how long a vector is (num of obs) ***
+ 
+ /// summary functions ///
+ length(x)
+ *** returns the number of elements (obs) in variable x ***
+ 
+ mean(x)
+ median(x)
+ sum(x)
+ max(x)
+ min(x)
+ range(x)
+ sd(x)
+ unique(x)
+ *** returns a vector with the unique values in x ***
+ 
+ summary()
+ 
+ /// chking a sample of your data ///
+ *** for large data sets ***
+ 
+
+ 
