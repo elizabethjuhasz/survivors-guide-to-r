@@ -47,10 +47,29 @@
  unique(x)
  *** returns a vector with the unique values in x ***
  
+ *** for the above commands, if you have missing values
+ you have to specify:
+ 
+ na.rm = T  
+ 
+ to confirm to R you want stats w/o missing values ***
+ 
+ # a variable with missing values
+ myVar = c(1, 2, 3, 4, NA, 5)
+ # mean function returns NA
+ [1] NA
+ # mean w/o missing values
+ mean(myVar, na.rm = T)
+ [1] 3
+ 
+ 
  summary()
  
  /// chking a sample of your data ///
  *** for large data sets ***
+ head(dataframe, number of observations)
  
+ # display first 7 observations
+ head(ch5data, 7)
 
  
