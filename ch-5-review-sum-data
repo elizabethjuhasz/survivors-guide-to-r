@@ -72,4 +72,42 @@
  # display first 7 observations
  head(ch5data, 7)
 
- 
+/// displaying data w/ a scatterplot ///
+# create x and y variables
+myX = c(1, 5, 19, 7, 6, 18, 11, 10)
+myY = c(4, 3, 12, 7, 8, 9, 15, 9)
+plot (myX, myY)
+
+*** labeling the points is done with the text() ***
+*** if you want point names offset, so that they don't 
+  cover up points use pos= option ***
+# to put label below the point
+pos = 1
+
+# put label to the left of the point
+pos = 2
+
+# put label above the point
+pos = 3
+
+# put label to the right of the point
+pos = 4
+
+*** author uses xpd =TRUE to allow labels to spill outside main plot region ***
+
+plot(myX, myY)
+text(myX, myY,
+  labels = myLabels, 
+  pos = 3,
+  xpd = TRUE)
+  
+/// scatterplot matrices ///
+pairs()
+
+pairs(myData)
+
+*** make sure you have functions right ***
+?FunctionName
+help.search("phrases")
+
+*** chk object storage modes and types ***
