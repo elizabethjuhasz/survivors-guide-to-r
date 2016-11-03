@@ -1,0 +1,7 @@
+*** adding column data ***
+cbind()
+
+myData = data.frame(School, Test, Change)
+myData2 = cbind(myData, Size)
+typeof(myData2$Test)
+
